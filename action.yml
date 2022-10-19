@@ -17,6 +17,11 @@ inputs:
   preset:
     description: "pint preset"
     required: false
+
+outputs:
+  stdout:
+    description: "pint output capture"
+
 runs:
   using: 'docker'
   image: 'Dockerfile'

@@ -21,4 +21,9 @@ fi
 
 echo "Running Command: " "${command_string[@]}"
 
-${command_string[@]}
+stdout=$( ${command_string[@]} )
+echo $stdout
+
+echo "stdout<<EOF" >> $GITHUB_OUTPUT
+echo "$stdout" >> $GITHUB_OUTPUT
+echo "EOF" >> $GITHUB_OUTPUT
